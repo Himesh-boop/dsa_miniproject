@@ -31,4 +31,10 @@ class URLshortener{
 
             return shortCode;
         }
+        string getOriginalURL(string shortCode) {
+            if (shortToLong.find(shortCode) != shortToLong.end()) {
+                return shortToLong[shortCode];
+            }
+            return "URL Not Found";
+        }
 };
